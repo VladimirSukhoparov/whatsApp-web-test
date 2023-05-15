@@ -1,0 +1,26 @@
+@import './color.scss';
+
+.chat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 72px;
+    pointer-events: all;
+    padding-left: 13px;
+    cursor:pointer;
+    &:hover{
+        background-color:$gray;
+    }
+    div{
+        width:calc(100% - 80px);
+    p{
+        padding:0 15px;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        overflow:hidden;
+    }
+}
+    img{
+        border-radius: 50%;
+    }
+}

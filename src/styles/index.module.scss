@@ -1,5 +1,100 @@
+@import "./color.scss";
 .main {
-  width: 1280px;
-  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  box-sizing:border-box;
+  &__heading {
+    background-color: $green;
+    width: 100%;
+    height: 120px;
+    z-index: -1;
+  }
+  &__body {
+    background-color: $background;
+    width: 100%;
+    height: calc(100% - 120px);
+    z-index: -1;
+  }
+  &__container {
+    position: absolute;
+    background-color: $gray;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    min-height: 500px;
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  &__bar {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__box {
+    background-color: $white;
+    width: 100%;
+    min-height: 400px;
+    box-sizing: border-box;
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    &__search {
+      height: 49px;
+      width: 100%;
+      margin:12px 0;
+      padding-left: 12px;
+      display: flex;
+      align-items: center;
+      input {
+        padding-left: 50px;
+        overflow: hidden;
+        height: 35px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: $gray;
+        border: none;
+        &:focus {
+          outline: 0;
+          outline-offset: 0;
+        }
+      }
+    }
+    &__iconSearch {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      fill: $gray-icon;
+      left: 20px;
+      cursor: pointer;
+    }
+    &__iconFilter {
+      width: 24px;
+      height: 24px;
+      fill: $gray-icon;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+    hr {
+      border: 0.5px solid $gray;
+    }
+    &__contacts{
+        flex-grow: 1;
+        overflow-y: auto;
+      }
+  }
+  &__chat {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
 }
-

@@ -1,0 +1,10 @@
+@import './color.scss';
+.avatar {
+  svg {
+    padding-top: 8px;
+    border-radius: 50%;
+    border: 1px solid $gray-user;
+    fill: $white;
+    background-color: $gray-user;
+  }
+}
