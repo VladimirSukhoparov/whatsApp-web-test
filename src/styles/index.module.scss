@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  box-sizing:border-box;
+  box-sizing: border-box;
   &__heading {
     background-color: $green;
     width: 100%;
@@ -42,12 +42,12 @@
     min-height: 400px;
     box-sizing: border-box;
     position: relative;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     &__search {
       height: 49px;
       width: 100%;
-      margin:12px 0;
+      margin: 12px 0;
       padding-left: 12px;
       display: flex;
       align-items: center;
@@ -83,10 +83,10 @@
     hr {
       border: 0.5px solid $gray;
     }
-    &__contacts{
-        flex-grow: 1;
-        overflow-y: auto;
-      }
+    &__contacts {
+      flex-grow: 1;
+      overflow-y: auto;
+    }
   }
   &__chat {
     width: 70%;
@@ -95,6 +95,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-left: 1px solid $background;
   }
-  
 }

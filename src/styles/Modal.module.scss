@@ -1,19 +1,19 @@
-@import './color.scss';
-.modal{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $background;
+@import "./color.scss";
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $background;
 
-&__heading {
+  &__heading {
     background-color: $green;
     width: 100%;
     height: 120px;
     z-index: -1;
   }
-&__body {
+  &__body {
     background-color: $background;
     width: 100%;
     height: 100vh;
@@ -21,41 +21,41 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 15%;
   }
-  &__title{
+  &__title {
     font-size: 32px;
     font-weight: 300;
     line-height: 37.5px;
   }
-  &__box{
+  &__box {
     margin-top: 16px;
     width: 560px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    p{
-       margin-right: 10px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    white-space: nowrap;
+    p {
+      margin-right: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      white-space: nowrap;
     }
-    input{
-        width: 360px;
-        padding-left: 10px;
-        overflow: hidden;
-        height: 35px;
-        border-radius: 10px;
-        background-color: $gray;
-        border: none;
-        &:focus {
-          outline: 0;
-          outline-offset: 0;
-        }
+    input {
+      width: 360px;
+      padding-left: 10px;
+      overflow: hidden;
+      height: 35px;
+      border-radius: 10px;
+      background-color: $gray;
+      border: none;
+      &:focus {
+        outline: 0;
+        outline-offset: 0;
+      }
     }
-   
   }
-  button{
+  button {
     width: 10%;
     margin-top: 25px;
     padding: 10px 25px;
@@ -63,18 +63,18 @@
     color: $white;
     border-radius: 8px;
     border: 1px solid $green;
-    transition-duration: .4s;
+    transition-duration: 0.4s;
     cursor: pointer;
-    &:hover{
-        transform: scale(1.1);
+    &:hover {
+      transform: scale(1.1);
     }
-}
+  }
 }
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $background;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $background;
+}

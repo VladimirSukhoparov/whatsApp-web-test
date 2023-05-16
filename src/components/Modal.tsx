@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import ReactModal from "react-modal";
+import { getStateInstance } from "../../utils/getState";
 import styles from "../styles/Modal.module.scss";
-import { useApi } from "@/hooks/useApi";
 
-const Modal = ({setChats, setAvatar}) => {
+const Modal = ({ setStateInstance }) => {
   const [modalIsOpen, setIsOpen] = useState(true);
+  const [idInstance, setIdInstance] = useState("");
+  const [apiTokenInstance, setApiTokenInstance] = useState("");
 
   function closeModal() {
     setIsOpen(false);
   }
-
-  const api = useApi();
-  const [idInstance, setIdInstance] = useState("");
-  const [apiTokenInstance, setApiTokenInstance] = useState("");
 
   const onSignIn = (res) => {
     if (res) {
@@ -21,19 +19,12 @@ const Modal = ({setChats, setAvatar}) => {
         "apiTokenInstance",
         JSON.stringify(apiTokenInstance)
       );
-      localStorage.setItem("stateInstance", JSON.stringify(res.stateInstance));
-      api.getChats({ idInstance, apiTokenInstance }).then((res) => setChats(res));
-      api
-      .getSettings({ idInstance, apiTokenInstance })
-      .then((res) =>{localStorage.setItem("userID", JSON.stringify(res.wid));
-     //api.getAvatar({ res.wid}).then((res) => setAvatar(res.urlAvatar)); 
-    });
-
+      setStateInstance(JSON.stringify(res.stateInstance));
       closeModal();
-    }
+    } else alert("Неправильный idInstance/apiTokenInstance");
   };
   const signIn = () => {
-    api.getState({ idInstance, apiTokenInstance }).then(onSignIn);
+    getStateInstance({ idInstance, apiTokenInstance }).then(onSignIn);
   };
   const handleIdInstance = ({ target }) => {
     setIdInstance(target.value);

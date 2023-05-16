@@ -5,8 +5,7 @@ import Avatar from "./Avatar";
 
 import styles from "../styles/Header.module.scss";
 
-const Header = ({avatar}) => {
-  
+const Header = ({ avatar }) => {
   return (
     <div className={styles.header}>
       <div className={styles.header__logo}>
